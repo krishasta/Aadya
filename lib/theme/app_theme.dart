@@ -50,7 +50,7 @@ class AppTheme {
 
   // ---------------------------------------------------------------------------
   // DARK PALETTE: MIDNIGHT SLATE & ELECTRIC SKY BLUE
-  // Ultra-modern, sleek dark theme matching the Aadhya brand identity
+  // Ultra-modern, sleek dark theme matching the SOLink brand identity
   // ---------------------------------------------------------------------------
   static const Color darkBg = Color(0xFF0A0F1D); // Deep Midnight Slate
   static const Color darkSurface = Color(0xFF131D31); // Frosted Navy Slate

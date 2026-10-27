@@ -114,7 +114,7 @@ class _ProvisioningScreenState extends State<ProvisioningScreen> with SingleTick
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    'Aadhya BLE Provisioning',
+                    'SOLink BLE Provisioning',
                     style: GoogleFonts.outfit(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
@@ -123,7 +123,7 @@ class _ProvisioningScreenState extends State<ProvisioningScreen> with SingleTick
                     overflow: TextOverflow.ellipsis,
                   ),
                   Text(
-                    'Aadhya Systems',
+                    'SOLink Systems',
                     style: GoogleFonts.outfit(
                       fontSize: 11,
                       color: AppTheme.getPrimary(context),
@@ -515,7 +515,7 @@ class _ProvisioningScreenState extends State<ProvisioningScreen> with SingleTick
                             ),
                             const SizedBox(height: 8),
                             Text(
-                              'Ensure your Aadhya device is powered on, nearby and advertising BLE.',
+                              'Ensure your SOLink device is powered on, nearby and advertising BLE.',
                               textAlign: TextAlign.center,
                               style: GoogleFonts.outfit(fontSize: 13, color: AppTheme.getTextSecondary(context), height: 1.4),
                             ),
@@ -658,7 +658,7 @@ class _ProvisioningScreenState extends State<ProvisioningScreen> with SingleTick
             ),
             const SizedBox(height: 8),
             Text(
-              'Your phone\'s Bluetooth is currently disabled. Please turn it on to discover and provision nearby Aadhya BLE devices.',
+              'Your phone\'s Bluetooth is currently disabled. Please turn it on to discover and provision nearby SOLink BLE devices.',
               textAlign: TextAlign.center,
               style: GoogleFonts.outfit(
                 fontSize: 13,
@@ -736,7 +736,7 @@ class _ProvisioningScreenState extends State<ProvisioningScreen> with SingleTick
           ),
           const SizedBox(height: 4),
           Text(
-            'Establish an authenticated, encrypted BLE session with your Aadhya device.',
+            'Establish an authenticated, encrypted BLE session with your SOLink device.',
             style: GoogleFonts.outfit(fontSize: 13, color: AppTheme.getTextSecondary(context)),
           ),
           const SizedBox(height: 16),
@@ -767,7 +767,7 @@ class _ProvisioningScreenState extends State<ProvisioningScreen> with SingleTick
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          dev.platformName.isNotEmpty ? dev.platformName : 'Aadhya Device',
+                          dev.platformName.isNotEmpty ? dev.platformName : 'SOLink Device',
                           style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 16),
                         ),
                         Text(
@@ -949,7 +949,7 @@ class _ProvisioningScreenState extends State<ProvisioningScreen> with SingleTick
                     ),
                   ),
                   Text(
-                    '2.4 GHz networks detected by Aadhya module',
+                    '2.4 GHz networks detected by SOLink module',
                     style: GoogleFonts.outfit(fontSize: 12, color: AppTheme.getTextSecondary(context)),
                   ),
                 ],
@@ -994,7 +994,7 @@ class _ProvisioningScreenState extends State<ProvisioningScreen> with SingleTick
                       CircularProgressIndicator(color: AppTheme.getPrimary(context)),
                       const SizedBox(height: 16),
                       Text(
-                        'Aadhya is scanning 2.4GHz Wi-Fi channels...',
+                        'SOLink is scanning 2.4GHz Wi-Fi channels...',
                         style: GoogleFonts.outfit(fontSize: 14, color: AppTheme.getTextSecondary(context)),
                       ),
                     ],
@@ -1095,7 +1095,7 @@ class _ProvisioningScreenState extends State<ProvisioningScreen> with SingleTick
           ),
           const SizedBox(height: 4),
           Text(
-            'Provide the network passphrase so your Aadhya module can connect.',
+            'Provide the network passphrase so your SOLink module can connect.',
             style: GoogleFonts.outfit(fontSize: 13, color: AppTheme.getTextSecondary(context)),
           ),
           const SizedBox(height: 16),
@@ -1307,7 +1307,7 @@ class _ProvisioningScreenState extends State<ProvisioningScreen> with SingleTick
             ),
             const SizedBox(height: 6),
             Text(
-              'The Aadhya module has joined your Wi-Fi network and is online.',
+              'The SOLink module has joined your Wi-Fi network and is online.',
               textAlign: TextAlign.center,
               style: GoogleFonts.outfit(fontSize: 13, color: AppTheme.getTextSecondary(context)),
             ),
@@ -1339,7 +1339,7 @@ class _ProvisioningScreenState extends State<ProvisioningScreen> with SingleTick
                       children: [
                         Text('Target Device:', style: GoogleFonts.outfit(color: AppTheme.getTextSecondary(context))),
                         Text(
-                          _prov.targetDevice?.platformName ?? 'Aadhya Device',
+                          _prov.targetDevice?.platformName ?? 'SOLink Device',
                           style: GoogleFonts.jetBrainsMono(fontSize: 12, color: AppTheme.getTextPrimary(context)),
                         ),
                       ],
@@ -1548,7 +1548,7 @@ class _ProvisioningScreenState extends State<ProvisioningScreen> with SingleTick
               maxLines: 3,
               style: GoogleFonts.jetBrainsMono(fontSize: 12, color: AppTheme.getTextPrimary(context)),
               decoration: const InputDecoration(
-                hintText: '{"ver":"v1","name":"PROV_Aadhya_IOT","pop":"abcd1234","transport":"ble"}',
+                hintText: '{"ver":"v1","name":"PROV_SOLink_IOT","pop":"abcd1234","transport":"ble"}',
               ),
             ),
             const SizedBox(height: 8),
@@ -1558,7 +1558,7 @@ class _ProvisioningScreenState extends State<ProvisioningScreen> with SingleTick
                 ActionChip(
                   label: const Text('Sample Payload', style: TextStyle(fontSize: 11)),
                   onPressed: () {
-                    qrTextController.text = '{"ver":"v1","name":"PROV_Aadhya_IOT","pop":"abcd1234","transport":"ble"}';
+                    qrTextController.text = '{"ver":"v1","name":"PROV_SOLink_IOT","pop":"abcd1234","transport":"ble"}';
                   },
                 ),
                 ActionChip(

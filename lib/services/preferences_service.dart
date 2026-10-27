@@ -43,7 +43,7 @@ class PreferencesService {
       title: 'REBOOT',
       command: 'REBOOT',
       colorValue: 0xFFB388FF,
-      description: 'Software restart Aadhya',
+      description: 'Software restart SOLink',
     ),
   ];
 

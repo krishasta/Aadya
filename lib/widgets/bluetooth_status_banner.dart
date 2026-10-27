@@ -129,7 +129,7 @@ class _BluetoothStatusBannerState extends State<BluetoothStatusBanner>
                             ),
                             const SizedBox(height: 2),
                             Text(
-                              'Turn ON Bluetooth to discover & connect to Aadhya devices.',
+                              'Turn ON Bluetooth to discover & connect to SOLink devices.',
                               style: GoogleFonts.outfit(
                                 fontSize: 11.5,
                                 color: AppTheme.getTextSecondary(context),

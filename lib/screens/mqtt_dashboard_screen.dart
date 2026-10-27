@@ -484,7 +484,7 @@ class _MqttDashboardScreenState extends State<MqttDashboardScreen> with SingleTi
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    'Aadhya Device Dashboard',
+                    'SOLink Device Dashboard',
                     style: GoogleFonts.outfit(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,

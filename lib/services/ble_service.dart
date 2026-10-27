@@ -525,7 +525,7 @@ class BleService extends ChangeNotifier {
   // Export Logs to Text
   String exportLogsAsText() {
     final buffer = StringBuffer();
-    buffer.writeln("=== Aadhya BLE SERIAL LOG EXPORT ===");
+    buffer.writeln("=== SOLink BLE SERIAL LOG EXPORT ===");
     buffer.writeln("Export Time: ${DateTime.now()}");
     buffer.writeln("Device: ${connectedDevice?.platformName ?? 'Unknown'} (${connectedDevice?.remoteId})");
     buffer.writeln("Total TX Bytes: $totalBytesSent, Total RX Bytes: $totalBytesReceived");

@@ -1,6 +1,6 @@
 {
-    "name": "esp32_bluetooth_app",
-    "short_name": "esp32_bluetooth_app",
+    "name": "SOLink",
+    "short_name": "SOLink",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

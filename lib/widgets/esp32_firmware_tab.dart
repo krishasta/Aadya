@@ -240,7 +240,7 @@ void loop() {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Aadhya Arduino Firmware Code',
+                              'SOLink Arduino Firmware Code',
                               style: GoogleFonts.outfit(fontSize: 16, fontWeight: FontWeight.bold),
                             ),
                             Text(
@@ -270,7 +270,7 @@ void loop() {
                       Clipboard.setData(const ClipboardData(text: esp32ArduinoCode));
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
-                          content: Text('Aadhya Firmware Code copied to clipboard!'),
+                          content: Text('SOLink Firmware Code copied to clipboard!'),
                           backgroundColor: AppTheme.surfaceLight,
                           behavior: SnackBarBehavior.floating,
                         ),
@@ -291,7 +291,7 @@ void loop() {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'How to Flash onto Your Aadhya Module',
+                    'How to Flash onto Your SOLink Module',
                     style: GoogleFonts.outfit(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 10),
@@ -299,7 +299,7 @@ void loop() {
                   _buildStep(2, 'Install the Board Package via Boards Manager: "esp32 by Espressif Systems".'),
                   _buildStep(3, 'Select your Dev Module board and USB COM port.'),
                   _buildStep(4, 'Paste this code into a new sketch and click Upload.'),
-                  _buildStep(5, 'Open this app, tap Scan, and connect to "Aadhya_IoT_Device"!'),
+                  _buildStep(5, 'Open this app, tap Scan, and connect to "SOLink_IoT_Device"!'),
                 ],
               ),
             ),

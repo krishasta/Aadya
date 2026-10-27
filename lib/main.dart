@@ -16,11 +16,11 @@ void main() async {
   // Initialize MQTT Service singleton
   await MqttService.instance.init();
 
-  runApp(const AadhyaBleApp());
+  runApp(const SOLinkBleApp());
 }
 
-class AadhyaBleApp extends StatelessWidget {
-  const AadhyaBleApp({super.key});
+class SOLinkBleApp extends StatelessWidget {
+  const SOLinkBleApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class AadhyaBleApp extends StatelessWidget {
         );
 
         return MaterialApp(
-          title: 'Aadhya',
+          title: 'SOLink',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
@@ -51,3 +51,6 @@ class AadhyaBleApp extends StatelessWidget {
     );
   }
 }
+
+/// Backwards compatibility alias
+typedef AadhyaBleApp = SOLinkBleApp;

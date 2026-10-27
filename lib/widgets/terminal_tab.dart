@@ -357,7 +357,7 @@ class _TerminalTabState extends State<TerminalTab> {
           ),
           const SizedBox(height: 6),
           Text(
-            'Commands sent and received from Aadhya will appear here',
+            'Commands sent and received from SOLink will appear here',
             style: GoogleFonts.outfit(fontSize: 13, color: AppTheme.textMuted),
           ),
         ],

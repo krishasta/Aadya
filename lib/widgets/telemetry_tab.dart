@@ -382,7 +382,7 @@ class _TelemetryTabState extends State<TelemetryTab> {
             ),
             const SizedBox(height: 6),
             Text(
-              'Aadhya can send format: TEMP:25.4, HUM:60, or comma-separated values',
+              'SOLink can send format: TEMP:25.4, HUM:60, or comma-separated values',
               textAlign: TextAlign.center,
               style: GoogleFonts.outfit(fontSize: 12, color: AppTheme.textMuted),
             ),

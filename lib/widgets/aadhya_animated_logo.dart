@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 
-/// Animated Aadhya Logo where the outer circular swirl rotates smoothly
-/// in slow-motion, while the center wording "Aadhya" remains perfectly stationary.
+/// Animated SOLink Logo where the outer circular swirl rotates smoothly
+/// in slow-motion, while the center wording "SOLink" remains perfectly stationary.
 class AadhyaAnimatedLogo extends StatefulWidget {
   final double size;
   final Duration duration;
@@ -103,7 +103,7 @@ class _AadhyaAnimatedLogoState extends State<AadhyaAnimatedLogo>
               ),
             ),
 
-            // 2. STATIONARY WORDING ("Aadhya" in the center - DOES NOT ROTATE)
+            // 2. STATIONARY WORDING ("SOLink" in the center - DOES NOT ROTATE)
             Image.asset(
               'assets/images/logo_text.png',
               width: widget.size,
@@ -119,7 +119,7 @@ class _AadhyaAnimatedLogoState extends State<AadhyaAnimatedLogo>
 }
 
 /// Full-screen ambient background watermark featuring the slow-motion rotating
-/// Aadhya logo behind page content. Non-interactive (IgnorePointer).
+/// SOLink logo behind page content. Non-interactive (IgnorePointer).
 class AadhyaAnimatedBackground extends StatelessWidget {
   final Widget? child;
   final double? size;
@@ -169,3 +169,7 @@ class AadhyaAnimatedBackground extends StatelessWidget {
     );
   }
 }
+
+/// SOLink aliases for clean forward-looking code
+typedef SOLinkAnimatedLogo = AadhyaAnimatedLogo;
+typedef SOLinkAnimatedBackground = AadhyaAnimatedBackground;

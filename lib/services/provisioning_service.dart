@@ -204,7 +204,7 @@ class ProvisioningService extends ChangeNotifier {
     if (espProv == null) return;
 
     isScanningWifi = true;
-    statusMessage = 'Aadhya is scanning nearby 2.4GHz Wi-Fi networks...';
+    statusMessage = 'SOLink is scanning nearby 2.4GHz Wi-Fi networks...';
     errorMessage = null;
     notifyListeners();
 
@@ -251,7 +251,7 @@ class ProvisioningService extends ChangeNotifier {
     stepSendConfig = StepStatus.inProgress;
     stepApplyConfig = StepStatus.pending;
     stepVerifyConnection = StepStatus.pending;
-    statusMessage = 'Sending Wi-Fi credentials to Aadhya device...';
+    statusMessage = 'Sending Wi-Fi credentials to SOLink device...';
     notifyListeners();
 
     try {
@@ -270,19 +270,19 @@ class ProvisioningService extends ChangeNotifier {
 
       // 2. Apply Configuration
       stepApplyConfig = StepStatus.inProgress;
-      statusMessage = 'Applying Wi-Fi configuration on Aadhya device...';
+      statusMessage = 'Applying Wi-Fi configuration on SOLink device...';
       notifyListeners();
 
       final applyOk = await espProv!.applyWifiConfig();
       if (!applyOk) {
         stepApplyConfig = StepStatus.failed;
-        throw Exception('Failed to apply configuration on Aadhya device.');
+        throw Exception('Failed to apply configuration on SOLink device.');
       }
       stepApplyConfig = StepStatus.success;
 
       // 3. Poll connection status (up to 25 seconds)
       stepVerifyConnection = StepStatus.inProgress;
-      statusMessage = 'Aadhya connecting to "$ssid" & acquiring IP address...';
+      statusMessage = 'SOLink connecting to "$ssid" & acquiring IP address...';
       notifyListeners();
 
       int attempts = 0;
@@ -310,17 +310,17 @@ class ProvisioningService extends ChangeNotifier {
               final reason = status.failedReason == WifiConnectFailedReason.AuthError
                   ? 'Authentication failed! Please check the Wi-Fi password.'
                   : status.failedReason == WifiConnectFailedReason.NetworkNotFound
-                      ? 'Network "$ssid" was not found by Aadhya device.'
+                      ? 'Network "$ssid" was not found by SOLink device.'
                       : 'Connection failed (${status.failedReason}).';
               stepVerifyConnection = StepStatus.failed;
               throw Exception(reason);
             }
           }
         } catch (pollError) {
-          // If polling fails because Aadhya rebooted after successful provisioning, handle gracefully
+          // If polling fails because SOLink rebooted after successful provisioning, handle gracefully
           if (attempts > 5) {
             stepVerifyConnection = StepStatus.success;
-            statusMessage = 'Credentials applied successfully! Aadhya device connected to Wi-Fi.';
+            statusMessage = 'Credentials applied successfully! SOLink device connected to Wi-Fi.';
             currentStep = ProvStep.completed;
             notifyListeners();
             return true;

@@ -146,7 +146,7 @@ class MqttService extends ChangeNotifier {
   int brokerPort = 1883;
   String topic = 'Sen62/#';
   String cmdTopic = 'Sen62/Device0/cmd';
-  String clientId = 'Aadhya_App_${DateTime.now().millisecondsSinceEpoch % 10000}';
+  String clientId = 'SOLink_App_${DateTime.now().millisecondsSinceEpoch % 10000}';
   String username = '';
   String password = '';
 

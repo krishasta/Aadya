@@ -75,7 +75,7 @@ class TransportBLE implements ProvTransport {
     }
 
     if (!_characteristics.containsKey('prov-session')) {
-      lastError = 'Provisioning endpoints not found on "${device.platformName.isNotEmpty ? device.platformName : "device"}". Make sure device is running Aadhya BLE Provisioning firmware.';
+      lastError = 'Provisioning endpoints not found on "${device.platformName.isNotEmpty ? device.platformName : "device"}". Make sure device is running SOLink BLE Provisioning firmware.';
       debugPrint('[TransportBLE] $lastError');
       return false;
     }

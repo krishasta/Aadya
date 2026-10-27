@@ -108,7 +108,7 @@ class _ScanScreenState extends State<ScanScreen> with SingleTickerProviderStateM
             ),
             const SizedBox(width: 10),
             Text(
-              'Aadhya BLE Connect',
+              'SOLink BLE Connect',
               style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 18),
             ),
           ],
@@ -116,13 +116,13 @@ class _ScanScreenState extends State<ScanScreen> with SingleTickerProviderStateM
         actions: [
           const ThemeToggleButton(),
           IconButton(
-            tooltip: 'Aadhya Firmware Code',
+            tooltip: 'SOLink Firmware Code',
             icon: const Icon(Icons.code_rounded, color: AppTheme.primaryBlue),
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (_) => Scaffold(
-                    appBar: AppBar(title: const Text('Aadhya Firmware Code')),
+                    appBar: AppBar(title: const Text('SOLink Firmware Code')),
                     body: const Esp32FirmwareTab(),
                   ),
                 ),
@@ -281,7 +281,7 @@ class _ScanScreenState extends State<ScanScreen> with SingleTickerProviderStateM
   Widget _buildDeviceCard(ScanResult result) {
     final device = result.device;
     final name = device.platformName.isNotEmpty ? device.platformName : 'Unknown BLE Device';
-    final isEsp = name.toUpperCase().contains('AADHYA') || name.toUpperCase().contains('AABS') || name.toUpperCase().contains('ESP') || name.toUpperCase().contains('UART') || name.toUpperCase().contains('IOT');
+    final isEsp = name.toUpperCase().contains('SOLINK') || name.toUpperCase().contains('AADHYA') || name.toUpperCase().contains('AABS') || name.toUpperCase().contains('ESP') || name.toUpperCase().contains('UART') || name.toUpperCase().contains('IOT');
     final isLastConnected = _lastDeviceId == device.remoteId.str;
     final isConnecting = _connectingDeviceId == device.remoteId.str;
     final rssi = result.rssi;
