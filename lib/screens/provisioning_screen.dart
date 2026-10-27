@@ -179,11 +179,6 @@ class _ProvisioningScreenState extends State<ProvisioningScreen> with SingleTick
           ),
           if (_prov.currentStep == ProvStep.deviceScan) ...[
             IconButton(
-              icon: Icon(Icons.qr_code_scanner_rounded, color: AppTheme.getTextPrimary(context)),
-              tooltip: 'Scan / Enter QR Code',
-              onPressed: _showQrCodeDialog,
-            ),
-            IconButton(
               icon: _ble.isScanning
                   ? SizedBox(
                       width: 18,
